@@ -54,7 +54,10 @@ main {
 #gallery-page,
 #results-page,
 #mail-page,
-#contact-page {
+#contact-page,
+#departments-page,
+#intermediate-page,
+#programs-page {
     background-color: var(--white-dark-color);
 }
 
@@ -109,8 +112,11 @@ header {
     transition: 1s ease;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 10px;
     z-index: 100;
+    overflow: auto;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
 
     & .sidebar-logo {
         padding: 2rem 0 0.6rem 0.6rem;
@@ -126,8 +132,48 @@ header {
     }
 }
 
+#sidebar .dropdown-list li a {
+    padding: 10px 0 10px 1.5rem;
+    background-color: #ccc;
+    transition: .3s;
+
+    &:hover {
+        padding-left: 3rem;
+    }
+}
+
+#sidebar li a {
+    display: inline-block;
+    width: 100%;
+}
+
 #sidebar.toggle-active {
     left: 0;
+}
+
+.dropdown-list {
+    display: none;
+    list-style: none;
+    width: 94%;
+    margin: auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dropdown-list.dropdown-activated {
+    display: block;
+}
+
+.dropdown-btn {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    padding-right: 2rem;
+
+    & button {
+        cursor: pointer;
+        border: none;
+    }
 }
 
 #main-navbar {
@@ -135,6 +181,10 @@ header {
     display: flex;
     gap: 1.5rem;
     align-items: center;
+
+    & li {
+        list-style: none;
+    }
 
     & a {
         height: 100%;
@@ -144,6 +194,49 @@ header {
         justify-content: center;
         color: var(--white-dark-color);
     }
+}
+
+#main-navbar>li {
+    position: relative;
+    height: 100%;
+}
+
+#main-navbar .dropdown-list {
+    position: absolute;
+    top: 80%;
+    left: -20px;
+    min-width: 180px;
+    background-color: #ccc;
+    transition: top .1s;
+    opacity: 0;
+    visibility: hidden;
+
+    & li,
+    & a {
+        width: 100%;
+    }
+
+    & a {
+        padding: 10px 1rem;
+        display: flex;
+        justify-content: left;
+        color: #000;
+
+        &:hover {
+            padding-left: 1.8rem;
+        }
+    }
+}
+
+#main-navbar .dropdown-list li,
+#sidebar .dropdown-list li {
+    border-bottom: 1px solid var(--blue-heading-color);
+}
+
+#main-navbar .dropdown-container:hover .dropdown-list {
+    top: 100%;
+    opacity: 1;
+    visibility: visible;
 }
 
 .menu-toggle {
@@ -178,6 +271,12 @@ header {
     color: var(--blue-light-color);
 }
 
+#main-navbar>li>a.active-link,
+#sidebar a.active-link {
+    color: var(--blue-light-color);
+}
+
+
 /*!     SECTION'S IMAGE STYLING  */
 
 .page-img {
@@ -202,10 +301,24 @@ header {
 
 .results-page-img {
     background-image: url('../images/pages/HResults-scaled.jpg');
+    background-position: top;
 }
 
 .contact-page-img {
     background-image: url('../images/pages/HContact-scaled.jpg');
+}
+
+.programs-page-img {
+    background-image: url('../images/pages/home_college.jpg');
+}
+
+.intermediate-page-img {
+    background-image: url('');
+}
+
+.departments-page-img {
+    background-image: url('../images/pages/department_page.jpeg');
+    background-position: top;
 }
 
 /*!     Intro Section  */
@@ -866,15 +979,17 @@ footer {
         & input {
             width: 100%;
         }
-
-        & textarea {
-            /* width: 90%; */
-        }
     }
 
     .map-section {
         margin: auto;
         width: fit-content;
         height: fit-content;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar #sidebar {
+        width: 100%;
     }
 }
