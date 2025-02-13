@@ -158,6 +158,7 @@ header {
     margin: auto;
     border-radius: 8px;
     overflow: hidden;
+    margin-top: 0.5rem;
 }
 
 .dropdown-list.dropdown-activated {
