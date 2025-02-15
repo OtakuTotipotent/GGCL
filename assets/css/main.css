@@ -620,13 +620,20 @@ header {
     gap: 1.6rem;
 }
 
+.results-list-box {
+    display: grid;
+    gap: 1.6rem;
+    height: fit-content;
+}
+
 .result-item {
+    height: fit-content;
     color: #ffffff;
     padding: 10px 1rem;
     font-size: 1.8rem;
     font-weight: 600;
     cursor: pointer;
-    transition: .4s;
+    transition: all .4s;
 
     &:hover {
         box-shadow: 0 3px 0px 2px #000;
@@ -642,6 +649,27 @@ header {
 .blue-result-item {
     background-color: var(--blue-heading-color);
     box-shadow: 0 3px 0px 2px var(--purple-color);
+}
+
+.result-item>div {
+    cursor: default;
+    background-color: var(--white-dark-color);
+    color: #000;
+    font-size: 15px;
+    padding: 1rem;
+    border-radius: 4px;
+    transition: .3s;
+    margin-top: 1rem;
+
+    & p {
+        padding: 8px 16px;
+        cursor: pointer;
+
+        &:hover {
+            padding-left: 18px;
+            color: var(--blue-heading-color);
+        }
+    }
 }
 
 /*!    MAIL SECTION & LOG IN   */
