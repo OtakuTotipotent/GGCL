@@ -4,11 +4,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GGCL | Inter Classes</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
-<body>
+<body id="intermediate-page">
+    <header>
+        <div class="logo">
+            <img src="/assets/images/logo/Logo-large.png" alt="GGCL">
+        </div>
 
+        <nav class="navbar">
+            <ul id="main-navbar">
+                <li> <a href="/index.html">Home</a> </li>
+                <li> <a href="/pages/admissions.html">Admission</a> </li>
+                <li class="dropdown-container">
+                    <a href="/pages/departments.html">Department</a>
+                    <ul class="dropdown-list">
+                        <li><a href="../departments/">Botany</a></li>
+                        <li><a href="../departments/chemistry.html">Chemistry</a></li>
+                        <li><a href="../departments/physics.html">Physics</a></li>
+                        <li><a href="../departments/math.html">Math</a></li>
+                        <li><a href="../departments/english.html">English</a></li>
+                        <li><a href="../departments/urdu.html">Urdu</a></li>
+                        <li><a href="../departments/islamiat.html">Islamiat</a></li>
+                        <li><a href="../departments/computer_science.html">IT/CS</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-container">
+                    <a href="/pages/programs.html">Program</a>
+                    <ul class="dropdown-list">
+                        <li><a href="intermediate.html">F.A/F.Sc/ICS</a></li>
+                        <li><a href="bachelor.html">BS Programs</a></li>
+                    </ul>
+                </li>
+                <li> <a href="/pages/results.html">Result</a> </li>
+                <li> <a href="/pages/gallery.html">Gallery</a> </li>
+                <li> <a href="/pages/contact.html">Contact us</a> </li>
+                <li> <a href="/pages/mail.html">Email</a> </li>
+            </ul>
+            <span class="menu-toggle" id="toggle-open">&#9776;</span>
+            <ul id="sidebar">
+                <span class="menu-toggle" id="toggle-close">&#10006;</span>
+                <div class="sidebar-logo">
+                    <img src="/assets/images/logo/Logo-small.png" alt="GGCL">
+                </div>
+                <li> <a href="/index.html">Home</a> </li>
+                <li> <a href="/pages/admissions.html">Admission</a> </li>
+                <li class="dropdown-container">
+                    <div class="dropdown-btn">
+                        <a href="/pages/departments.html">Department</a>
+                        <button>🔽</button>
+                    </div>
+                    <ul class="dropdown-list">
+                        <li><a href="../departments/">Botany</a></li>
+                        <li><a href="../departments/chemistry.html">Chemistry</a></li>
+                        <li><a href="../departments/physics.html">Physics</a></li>
+                        <li><a href="../departments/math.html">Math</a></li>
+                        <li><a href="../departments/english.html">English</a></li>
+                        <li><a href="../departments/urdu.html">Urdu</a></li>
+                        <li><a href="../departments/islamiat.html">Islamiat</a></li>
+                        <li><a href="../departments/computer_science.html">IT/CS</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-container">
+                    <div class="dropdown-btn">
+                        <a href="/pages/programs.html">Program</a>
+                        <button>🔽</button>
+                    </div>
+                    <ul class="dropdown-list">
+                        <li><a href="intermediate.html">F.A/F.Sc/ICS</a></li>
+                        <li><a href="bachelor.html">BS Programs</a></li>
+                    </ul>
+                </li>
+                <li> <a href="/pages/results.html">Result</a> </li>
+                <li> <a href="/pages/gallery.html">Gallery</a> </li>
+                <li> <a href="/pages/contact.html">Contact us</a> </li>
+                <li> <a href="/pages/mail.html">Email</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="page-img intermediate-page-img"></div>
+        <h3 class="light-blue-heading">Intermediate Programmes<br>F.A / F.Sc / ICS</h3>
+        <h3 class="dark-blue-heading">Compulsory Subject: English, Urdu, Islamiat (Part-I)& Pak Studies(Part-II)</h3>
+        <div class="groups-vs-subjects-container">
+            <div class="inter-subjects">
+                <h3 class="light-blue-heading">Select one of the following Group</h3>
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <td>Physics, Chemistry & Biology</td>
+                            <td>(Pre-Medical)</td>
+                        </tr>
+                        <tr>
+                            <td>Physics, Chemistry & Mathematics</td>
+                            <td>(Pre-Engineering)</td>
+                        </tr>
+                        <tr>
+                            <td>Economics, Statistics & Mathematics</td>
+                            <td>(General Science)</td>
+                        </tr>
+                        <tr>
+                            <td>Computer, Math & Physics</td>
+                            <td>(ICS)</td>
+                        </tr>
+                        <tr>
+                            <td>Computer, Math & Statistics</td>
+                            <td>(ICS)</td>
+                        </tr>
+                        <tr>
+                            <td>Computer, Math & Economics</td>
+                            <td>(ICS)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="inter-groups">
+                <h3 class="light-blue-heading">Select one subject from each Group</h3>
+                <div class="table-container">
+                    <table id="special-table">
+                        <thead>
+                            <tr>
+                                <th>Group A</th>
+                                <th>Group B</th>
+                                <th>Group C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>H & Physical Education.</td>
+                                <td>Sociology</td>
+                                <td>Statistics</td>
+                            </tr>
+                            <tr>
+                                <td>Civics</td>
+                                <td>Education</td>
+                                <td>Islamiat Elective</td>
+                            </tr>
+                            <tr>
+                                <td>Economics</td>
+                                <td>Saraeki</td>
+                                <td>Arabic</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="admission-committee-container">
+            <div class="committee-card">
+                <h3 class="dark-blue-heading">Admission Committee
+                    Medical Group</h3>
+                <p class="committee-members-p_tag">
+                    Prof. Syed Qasvarr Abbas (Chairman) <br>
+                    Prof. M.Mukhtar Siarti (V.Chairman) <br>
+                    Prof. Dr.Jurat Abbas <br>
+                    Prof. Hassan Raza <br>
+                    Prof. Nabi Noor <br>
+                    Prof. Riaz Hussain Dhat <br>
+                    Prof. Sami Ullah <br>
+                    Prof. Amjad Hassnain <br>
+                </p>
+            </div>
+            <div class="committee-card">
+                <h3 class="dark-blue-heading">Admission Committee
+                    Non-Medical Group</h3>
+                <p class="committee-members-p_tag">
+                    Prof. Muhammad Ajmal (Chairman) <br>
+                    Prof. Khalid Ansari (V.Chairman) <br>
+                    Prof. Amir Rasool <br>
+                    Prof. Muhammad Amjad <br>
+                    Prof. Mukhtiar Hussain <br>
+                    Prof. Aqil Javeed <br>
+                    Prof. M. Umer <br>
+                    Prof. M.Sami Ullah <br>
+                </p>
+            </div>
+            <div class="committee-card">
+                <h3 class="dark-blue-heading">Admission Committee
+                    ICS Group</h3>
+                <p class="committee-members-p_tag">
+                    Prof. Muhammad Abid (Chairman) <br>
+                    Prof. Muhammad Ajmal (V.Chairman) <br>
+                    Prof. Shahzad Khan <br>
+                    Prof. Munir Ahmed <br>
+                    Prof. Naeem Abbas <br>
+                    Prof. M.Javed Sheikh <br>
+                    Prof. Farrukh Shahzad <br>
+                    Prof. M.Sami Ullah <br>
+                </p>
+            </div>
+            <div class="committee-card">
+                <h3 class="dark-blue-heading">Admission Committee
+                    Arts Group</h3>
+                <p class="committee-members-p_tag">
+                    Prof. Dr. Muhammad Bilal (Chairman) <br>
+                    Prof. Adnan Ahmad (V.Chairman) <br>
+                    Prof. Tahir Masood Mahar <br>
+                    Prof. M.Akram <br>
+                    Prof. Sibte Hussain <br>
+                    Prof. Tahir Hussain <br>
+                    Prof. Bashir Ahmed Mailk <br>
+                    Prof. Mahar Ghulam Abbas <br>
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        © Developed By &nbsp; <a href="https://github.com/OtakuTotipotent/GGCL" target="_blank">M. Afnan Hassan</a>. All
+        Rights Reserved. 2025
+    </footer>
+
+    <script src="/assets/js/main.js"></script>
 </body>
 
 </html>

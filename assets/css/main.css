@@ -72,6 +72,20 @@ main {
     background-color: var(--purple-color);
 }
 
+.light-blue-heading {
+    background-color: var(--blue-heading-color);
+    color: white;
+    text-align: center;
+    padding: 6px;
+}
+
+.dark-blue-heading {
+    background-color: var(--purple-color);
+    color: white;
+    padding: 6px;
+    text-align: center;
+}
+
 /*!     HEADER AND NAVIGATION  */
 
 header {
@@ -318,7 +332,8 @@ header {
 }
 
 .intermediate-page-img {
-    background-image: url('');
+    background-image: url('../images/pages/department_page.jpeg');
+    background-position: top;
 }
 
 .departments-page-img {
@@ -895,7 +910,103 @@ header {
     place-content: center;
 }
 
-/*!       */
+/*!     INTER CLASSES SECTION  */
+
+#intermediate-page main>.light-blue-heading {
+    margin: 6px 0 1rem;
+    font-size: 1.5rem;
+}
+
+#intermediate-page .dark-blue-heading {
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.groups-vs-subjects-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+    &>div {
+        box-shadow: 0 0 4px 2px #999;
+        flex-basis: 47%;
+        border-radius: 10px;
+        overflow: hidden;
+
+        & h3 {
+            font-weight: 500;
+        }
+    }
+}
+
+.table-container {
+    padding: 0.5rem;
+
+    & table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    & th {
+        background-color: var(--purple-color);
+        padding: .6rem;
+        color: white;
+        font-weight: normal;
+    }
+
+    & td {
+        padding: 6px;
+    }
+}
+
+#special-table {
+    & td {
+        border: 1px solid black;
+        padding: .9rem;
+    }
+}
+
+.admission-committee-container {
+    width: 90%;
+    margin: 2rem auto;
+
+    & .dark-blue-heading {
+        font-size: 16px !important;
+    }
+
+    & .committee-members-p_tag {
+        text-align: center;
+        line-height: 1.8;
+        font-size: 15px;
+        padding: 8px 0;
+    }
+}
+
+@media (min-width: 576px) {
+    .admission-committee-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .admission-committee-container {
+        justify-content: space-between;
+    }
+}
+
+.committee-card {
+    box-shadow: 0 0 4px 2px #999;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
 
 /*!     FOOTER  */
 
@@ -1018,6 +1129,14 @@ footer {
         margin: auto;
         width: fit-content;
         height: fit-content;
+    }
+
+    .groups-vs-subjects-container {
+        gap: 2rem;
+
+        &>div {
+            flex-basis: 100%;
+        }
     }
 }
 
